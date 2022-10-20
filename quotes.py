@@ -40,7 +40,7 @@ elif len(sys.argv) == 3: # The command can only be to add a quote or invalid
 		except FileNotFoundError:
 			with open('quotes.txt', 'w') as quotes_file:
 				quotes_file.write(sys.argv[2])
-		else:
+		finally:
 			print("New quote was added succesfully.")
 
 else:
